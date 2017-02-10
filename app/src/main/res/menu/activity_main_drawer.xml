@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_fb"
+            android:icon="@drawable/fblogowhite"
+            android:title="facebook 登入"/>
+    </group>
+
+    <item android:title="個人選單">
+        <menu>
+            <item
+                android:id="@+id/nav_favorite"
+                android:icon="@drawable/favorite"
+                android:title="我的收藏"/>
+            <item
+                android:id="@+id/nav_browse_history"
+                android:icon="@drawable/history"
+                android:title="瀏覽紀錄"/>
+        </menu>
+    </item>
+
+    <item android:title="購物">
+        <menu>
+            <item
+                android:id="@+id/nav_shopping_cart"
+                android:icon="@drawable/shopping_cart"
+                android:title="購物車"/>
+            <item
+                android:id="@+id/nav_shopping_history"
+                android:icon="@drawable/shopping_history"
+                android:title="購物紀錄"/>
+        </menu>
+    </item>
+
+    <item android:title="你農我農">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/setting"
+                android:title="設定"/>
+            <item
+                android:id="@+id/nav_report"
+                android:icon="@drawable/report"
+                android:title="問題回報"/>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/about"
+                android:title="關於"/>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- The main content view -->
+        <RelativeLayout
+            android:id="@+id/content_frame_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_content"
+                android:background="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:minHeight="?attr/actionBarSize"
+                />
+
+            <android.support.design.widget.TabLayout
+                android:layout_below="@id/toolbar_content"
+                android:id="@+id/tabs_content"
+                android:background="#3CCF71"
+                app:tabTextColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="簡介"/>
+                <android.support.design.widget.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="地圖"/>
+                <android.support.design.widget.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="評價"/>
+
+            </android.support.design.widget.TabLayout>
+
+            <!--簡介-->
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tabs_content"
+                android:fillViewport="true"
+                android:id="@+id/brief_scroll">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    >
+
+                <ImageView
+                    android:id="@+id/content_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/i1_1_2"/>
+
+                <View
+                    android:id="@+id/content_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <TextView
+                    android:id="@+id/brief_tel"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/brief_address"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:id="@+id/content_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <TextView
+                    android:id="@+id/brief_introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"/>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <!--地圖-->
+            <WebView
+                android:id="@+id/map"
+                android:layout_below="@id/tabs_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <!--評價-->
+            <TextView
+                android:id="@+id/content_tv_r1"
+                android:layout_below="@id/tabs_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="張誌元"/>
+            <TextView
+                android:id="@+id/content_tv_r2"
+                android:layout_below="@id/content_tv_r1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="春節期間我帶全家人去花東縱谷旅遊，從臺北、花蓮到臺東。雖然塞車，一路上享受怡人景色，也放鬆了心情。"/>
+            <TextView
+                android:id="@+id/content_tv_r3"
+                android:layout_below="@id/content_tv_r2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="何真真"/>
+            <TextView
+                android:id="@+id/content_tv_r4"
+                android:layout_below="@id/content_tv_r3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="每年花東二期稻作結束後，許多農地都會種植油菜花、波斯菊等花卉當作綠肥，使得每年12月到隔年2月的花東隨處都有花海可看。"/>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>
